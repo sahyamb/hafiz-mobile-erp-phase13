@@ -1,0 +1,20 @@
+PHASE 13 UPDATE — hafizmobile.shop
+Do not delete the database. Do not replace the .env file.
+
+1. Download the ZIP from GitHub (Code button, then Download ZIP).
+2. In Hostinger File Manager, open public_html.
+3. Upload the ZIP and extract it.
+4. Open the new folder hafiz-mobile-erp-phase13-main.
+5. Move the folders app, config, database, resources, routes into public_html so they replace the old ones.
+6. Do not replace .env.
+7. SSH:
+
+cd /home/u252928672/domains/hafizmobile.shop/public_html
+php artisan migrate --force
+php artisan db:seed --force
+php artisan view:clear
+php artisan route:clear
+php artisan cache:clear
+
+If php is not found, use php8.4 artisan instead of php artisan.
+The sidebar must say Phase 13 · v0.13.0.
